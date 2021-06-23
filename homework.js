@@ -46,4 +46,15 @@ const searchImages = (query) => {
     .catch((err) => console.log(err));
 };
 
-searchImages("cars");
+searchImages("whatever");
+
+window.onload = () => {
+  const primaryBtn = document.querySelector(".load-images");
+  const secondaryBtn = document.querySelector(".load-secondary-images");
+  primaryBtn.addEventListener("click", () => {
+    searchImages("whatever");
+  });
+  secondaryBtn.addEventListener("click", () => {
+    searchImages("whatever");
+  });
+};
